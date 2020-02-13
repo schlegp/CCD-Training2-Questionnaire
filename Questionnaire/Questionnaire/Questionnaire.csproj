@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Component\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorFabric.Dropdown" Version="2.2.0" />
+  </ItemGroup>
+
 </Project>

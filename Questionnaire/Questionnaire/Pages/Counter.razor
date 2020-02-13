@@ -9,7 +9,10 @@
 }
 else 
 {
-    <p>Ich habe @Questions.Count() Fragen für disch</p>
+    @foreach (var question in Questions)
+    {
+        <QuestionComp Question="question"></QuestionComp>
+    }
 }
 <p>Current count: @currentCount</p>
 

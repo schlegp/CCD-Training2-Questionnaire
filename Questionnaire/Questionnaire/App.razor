@@ -1,6 +1,8 @@
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <BlazorFabric.Layer.LayerHost Style="display:flex; flex-direction: row;width:100vw">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        </BlazorFabric.Layer.LayerHost>
     </Found>
     <NotFound>
         <LayoutView Layout="@typeof(MainLayout)">
