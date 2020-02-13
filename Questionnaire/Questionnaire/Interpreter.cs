@@ -49,13 +49,13 @@ namespace Questionnaire
                 if (isQuestion)
                 {
                     if (currentQuestion != null)
-                        currentQuestion.Answers.ToList().Add(new Answer { IsChosen = false, IsCorrect = false, Text = "Don't Know" });
+                        currentQuestion.Answers.Add(new Answer { IsChosen = false, IsCorrect = false, Text = "Don't Know" });
                     currentQuestion = InterpretQuestion(line);
                     questions.Add(currentQuestion);
                 }
                 else
                 {
-                    currentQuestion.Answers.ToList().Add(InterpretAnswer(line));
+                    currentQuestion.Answers.Add(InterpretAnswer(line));
                 }
             }
 
