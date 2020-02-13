@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phsc1\\Source\\Repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {}
+    "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phsc1\\Source\\Repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
+    "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phsc1\\Source\\Repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
+        "projectUniqueName": "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
         "projectName": "Questionnaire",
-        "projectPath": "C:\\Users\\phsc1\\Source\\Repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
+        "projectPath": "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
         "packagesPath": "C:\\Users\\phsc1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phsc1\\Source\\Repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\obj\\",
+        "outputPath": "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
