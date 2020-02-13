@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questionnaire.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,16 +18,16 @@ namespace Questionnaire
         public Answer InterpretAnswer(string line)
         {
             var answer = new Answer();
-            answer.RightAnswer = false;
+            answer.IsCorrect = false;
             if (line[0] == '*')
-                answer.RightAnswer = true;
-            if (answer.RightAnswer)
+                answer.IsCorrect = true;
+            if (answer.IsCorrect)
             {
-                answer.AnswerText = line.Substring(1)
+                answer.Text = line.Substring(1);
             }
             else
             {
-                answer.AnswerText = line;
+                answer.Text = line;
             }
             return answer;
         }

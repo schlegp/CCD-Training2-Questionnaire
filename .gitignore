@@ -2,11 +2,10 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vs
+/.git
 /Questionnaire/.vs
-/Questionnaire/Questionnaire/.vs
 /Questionnaire/Questionnaire/bin
-/Questionnaire/Questionnaire/Questionnaire/bin
-/Questionnaire/Questionnaire/Questionnaire/obj
 /Questionnaire/Questionnaire/obj
 /Questionnaire/TestQuestionnaire/bin
 /Questionnaire/TestQuestionnaire/obj
