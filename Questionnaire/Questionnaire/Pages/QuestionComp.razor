@@ -1,7 +1,0 @@
-﻿@namespace Questionnaire
-
-<BlazorFabric.Dropdown ItemsSource=@Question.Answers TItem="Questionnaire.Models.Answer" Label="@Question.Text">
-    <ItemTemplate>
-        <DropdownItem TItem="Questionnaire.Models.Answer" ItemKey=@context.Text Text=@context.Text ItemType=@SelectableOptionMenuItemType.Normal />
-    </ItemTemplate>
-</BlazorFabric.Dropdown>

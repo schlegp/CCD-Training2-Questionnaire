@@ -29,7 +29,6 @@ namespace Questionnaire
             {
                 answer.Text = line;
             }
-            answer.Type = BlazorFabric.SelectableOptionMenuItemType.Normal;
             return answer;
         }
 
@@ -50,7 +49,7 @@ namespace Questionnaire
                 if (isQuestion)
                 {
                     if (currentQuestion != null)
-                        currentQuestion.Answers.Add(new Answer { IsChosen = false, IsCorrect = false, Text = "Don't Know", Type = BlazorFabric.SelectableOptionMenuItemType.Normal });
+                        AddNotKnown(currentQuestion);
                     currentQuestion = InterpretQuestion(line);
                     questions.Add(currentQuestion);
                 }
@@ -59,8 +58,15 @@ namespace Questionnaire
                     currentQuestion.Answers.Add(InterpretAnswer(line));
                 }
             }
-
+            AddNotKnown(currentQuestion);
+            
             return questions;
+        }
+
+        public void AddNotKnown(Question question)
+        {
+            var nullAnswer = new Answer { IsCorrect = false, Text = "Don't know" };
+            question.Answers?.Add(nullAnswer);
         }
     }
 }

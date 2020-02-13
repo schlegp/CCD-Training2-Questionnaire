@@ -9,6 +9,9 @@ namespace Questionnaire.Models
     {
         public int Percentage { get; set; }
 
+        public int CountCorrect { get; set; }
+        public int CountWrong { get; set; }
+
         public IEnumerable<AnswerState> AnswerStates { get; set; }
     }
 }

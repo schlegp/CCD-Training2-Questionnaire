@@ -10,29 +10,41 @@ namespace Questionnaire
     {
         public Score Evaluate(IEnumerable<Question> questions)
         {
-            var score = CalculateScore(questions);
-            
-            return score;
-        }
-
-        public Score CalculateScore(IEnumerable<Question> questions)
-        {
             IEnumerable<AnswerState> answerStates = questions.Select(IsAnswerCorrect);
-            return new Score { AnswerStates = answerStates, Percentage = CalculatePercentage(questions) };
+            var percentage = CalculatePercentage(questions);
+            return CreateScore(answerStates,percentage);
         }
 
-        private int CalculatePercentage(IEnumerable<Question> questions)
+        public Score CreateScore(IEnumerable<AnswerState> answerStates, int percentage)
         {
-            var correctAnswers = questions.SelectMany(x => x.Answers.Where(y => y.IsChosen && y.IsCorrect));
+            var returnScore = new Score();
+            returnScore.AnswerStates = answerStates;
+            returnScore.CountCorrect = answerStates.Count(x => x.Correct);
+            returnScore.CountWrong = answerStates.Count(x => !x.Correct);
+            returnScore.Percentage = percentage;
+            return returnScore;
+
+        }
+
+        public int CalculatePercentage(IEnumerable<Question> questions)
+        {
+            var correctAnswers = questions.SelectMany(x => x.Answers.Where(y => x.ChoosenAnswer == y.Text && y.IsCorrect));
             var numberQuestions = questions.Count();
-            var score = correctAnswers.Count() / numberQuestions;
+            var score = (double)correctAnswers.Count() / (double)numberQuestions;
             var scorePercent = score * 100;
-            return scorePercent;
+            return (int)scorePercent;
         }
 
         public AnswerState IsAnswerCorrect(Question question)
         {
-            return new AnswerState { CorrectAnswer = question.Answers.FirstOrDefault(x => x.IsCorrect), GivenAnswer = question.Answers.FirstOrDefault(x => x.IsChosen), Question = question};
+            var answerState = new AnswerState
+            {
+                CorrectAnswer = question.Answers.FirstOrDefault(x => x.IsCorrect),
+                GivenAnswer = question.Answers.FirstOrDefault(x => x.Text == question.ChoosenAnswer),
+                Question = question
+            };
+            answerState.Correct = answerState.GivenAnswer == answerState.CorrectAnswer;
+            return answerState;
         }
     }
 }

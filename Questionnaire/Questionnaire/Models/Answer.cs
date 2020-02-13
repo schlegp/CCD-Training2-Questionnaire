@@ -10,8 +10,5 @@ namespace Questionnaire.Models
     {
         public string Text { get; set; }
         public bool IsCorrect { get; set; }
-        public bool IsChosen { get; set; }
-
-        public SelectableOptionMenuItemType Type { get; set; }
     }
 }

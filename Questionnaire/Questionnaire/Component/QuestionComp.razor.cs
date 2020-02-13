@@ -11,5 +11,9 @@ namespace Questionnaire
     {
         [Parameter]
         public Question Question { get; set; }
+
+        public string Choosen { get; set; }
+
+
     }
 }
