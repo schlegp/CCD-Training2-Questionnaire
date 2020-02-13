@@ -44,5 +44,15 @@ namespace TestQuestionnaire
             Assert.AreEqual(false, result.IsCorrect);
 
         }
+
+
+        [TestMethod]
+        [DataRow("?aösldkjfaölskdjföasldkf")]
+        public void TestQuestionInterpreter(string line)
+        {
+            Question result = testInterpreter.InterpretQuestion(line);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result.Text, (line).Substring(1));
+        }
     }
 }
