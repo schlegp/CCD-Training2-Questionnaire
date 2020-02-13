@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Questionnaire;
 using Questionnaire.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TestQuestionnaire
 {
