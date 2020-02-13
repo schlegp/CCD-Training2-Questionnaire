@@ -38,5 +38,28 @@ namespace Questionnaire
             question.Text = line.Substring(1);
             return question;
         }
+
+        public IEnumerable<Question> Interpret(IEnumerable<string> lines)
+        {
+            List<Question> questions = new List<Question>();
+            Question currentQuestion = null;
+            foreach(var line in lines)
+            {
+                var isQuestion = IsQuestion(line);
+                if (isQuestion)
+                {
+                    if (currentQuestion != null)
+                        currentQuestion.Answers.ToList().Add(new Answer { IsChosen = false, IsCorrect = false, Text = "Don't Know" });
+                    currentQuestion = InterpretQuestion(line);
+                    questions.Add(currentQuestion);
+                }
+                else
+                {
+                    currentQuestion.Answers.ToList().Add(InterpretAnswer(line));
+                }
+            }
+
+            return questions;
+        }
     }
 }
