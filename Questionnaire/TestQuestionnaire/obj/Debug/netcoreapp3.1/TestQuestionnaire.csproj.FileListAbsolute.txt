@@ -1,0 +1,4 @@
+C:\Users\lukas\OneDrive\Projekte\schlegp\CCD-Training2-Questionnaire\Questionnaire\TestQuestionnaire\obj\Debug\netcoreapp3.1\TestQuestionnaire.csprojAssemblyReference.cache
+C:\Users\lukas\OneDrive\Projekte\schlegp\CCD-Training2-Questionnaire\Questionnaire\TestQuestionnaire\obj\Debug\netcoreapp3.1\TestQuestionnaire.csproj.CoreCompileInputs.cache
+C:\Users\lukas\OneDrive\Projekte\schlegp\CCD-Training2-Questionnaire\Questionnaire\TestQuestionnaire\obj\Debug\netcoreapp3.1\TestQuestionnaire.AssemblyInfoInputs.cache
+C:\Users\lukas\OneDrive\Projekte\schlegp\CCD-Training2-Questionnaire\Questionnaire\TestQuestionnaire\obj\Debug\netcoreapp3.1\TestQuestionnaire.AssemblyInfo.cs

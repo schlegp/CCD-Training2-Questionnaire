@@ -2029,6 +2029,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Questionnaire/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Questionnaire.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Questionnaire.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -6856,6 +6869,11 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Questionnaire/1.0.0": {
+      "type": "project",
+      "path": "../Questionnaire/Questionnaire.csproj",
+      "msbuildProject": "../Questionnaire/Questionnaire.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6863,6 +6881,7 @@
       "MSTest.TestAdapter >= 2.0.0",
       "MSTest.TestFramework >= 2.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
+      "Questionnaire >= 1.0.0",
       "coverlet.collector >= 1.0.1"
     ]
   },
@@ -6896,7 +6915,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
+              "projectPath": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6936,6 +6959,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
