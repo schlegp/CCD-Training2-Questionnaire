@@ -29,6 +29,7 @@ namespace Questionnaire
             {
                 answer.Text = line;
             }
+            answer.Type = BlazorFabric.SelectableOptionMenuItemType.Normal;
             return answer;
         }
 
@@ -49,7 +50,7 @@ namespace Questionnaire
                 if (isQuestion)
                 {
                     if (currentQuestion != null)
-                        currentQuestion.Answers.Add(new Answer { IsChosen = false, IsCorrect = false, Text = "Don't Know" });
+                        currentQuestion.Answers.Add(new Answer { IsChosen = false, IsCorrect = false, Text = "Don't Know", Type = BlazorFabric.SelectableOptionMenuItemType.Normal });
                     currentQuestion = InterpretQuestion(line);
                     questions.Add(currentQuestion);
                 }

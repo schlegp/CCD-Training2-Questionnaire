@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BlazorFabric;
 
 namespace Questionnaire.Models
 {
@@ -10,5 +11,7 @@ namespace Questionnaire.Models
         public string Text { get; set; }
         public bool IsCorrect { get; set; }
         public bool IsChosen { get; set; }
+
+        public SelectableOptionMenuItemType Type { get; set; }
     }
 }
