@@ -1,34 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {}
+    "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
+    "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
+        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
         "projectName": "Questionnaire",
-        "projectPath": "E:\\Projects\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
-        "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\obj\\",
+        "projectPath": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
+        "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -39,29 +40,7 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "Microsoft.AspNetCore.Blazor": {
-              "target": "Package",
-              "version": "[3.0.0-preview6.19307.2, )"
-            },
-            "Microsoft.AspNetCore.Blazor.Build": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview6.19307.2, )"
-            },
-            "Microsoft.AspNetCore.Blazor.DevServer": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview6.19307.2, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
@@ -72,7 +51,15 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-014883\\RuntimeIdentifierGraph.json"
         }
       }
     }
