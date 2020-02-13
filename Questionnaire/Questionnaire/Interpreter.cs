@@ -31,5 +31,12 @@ namespace Questionnaire
             }
             return answer;
         }
+
+        public Question InterpretQuestion(string line)
+        {
+            var question = new Question();
+            question.Text = line.Substring(1);
+            return question;
+        }
     }
 }

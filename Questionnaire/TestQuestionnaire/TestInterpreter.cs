@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Questionnaire;
+using Questionnaire.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,6 +25,16 @@ namespace TestQuestionnaire
         {
             var result = testInterpreter.IsQuestion(line);
             Assert.AreEqual(result, expected);
+        }
+
+
+        [TestMethod]
+        [DataRow("?aösldkjfaölskdjföasldkf")]
+        public void TestQuestionInterpreter(string line)
+        {
+            Question result = testInterpreter.InterpretQuestion(line);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result.Text, (line).Substring(1));
         }
     }
 }
