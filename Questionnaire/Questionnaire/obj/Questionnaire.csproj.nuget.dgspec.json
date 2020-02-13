@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {}
+    "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
+    "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
+        "projectUniqueName": "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
         "projectName": "Questionnaire",
-        "projectPath": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
-        "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukas\\OneDrive\\Projekte\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\obj\\",
+        "projectPath": "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\Questionnaire.csproj",
+        "packagesPath": "C:\\Users\\phsc1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phsc1\\source\\repos\\schlegp\\CCD-Training2-Questionnaire\\Questionnaire\\Questionnaire\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\phsc1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-014883\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
