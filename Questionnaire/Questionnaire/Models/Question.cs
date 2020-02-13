@@ -8,6 +8,6 @@ namespace Questionnaire.Models
     public class Question
     {
         public string Text { get; set; }
-        public IEnumerable<Answer> Answers { get; set; }
+        public IEnumerable<Answer> Answers { get; set; } = new List<Answer>();
     }
 }
