@@ -1,0 +1,12 @@
+﻿@namespace QuestionnaireClientSide
+
+<BlazorFabric.Dropdown ItemsSource=@Question.Answers TItem="Answer" Label="@Question.Text" @bind-SelectedKey=@Question.ChoosenAnswer>
+    <ItemTemplate>
+        <DropdownItem TItem="Answer" ItemKey=@context.Text Text=@context.Text ItemType=@SelectableOptionMenuItemType.Normal />
+    </ItemTemplate>
+</BlazorFabric.Dropdown>
+
+@if (Question.ChoosenAnswer != null)
+{
+    <div>Choosen Answer is @Question.ChoosenAnswer</div>
+}

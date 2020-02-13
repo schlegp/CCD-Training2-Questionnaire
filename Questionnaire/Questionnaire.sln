@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Questionnaire", "Questionna
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestQuestionnaire", "TestQuestionnaire\TestQuestionnaire.csproj", "{41F20552-C2D2-45B8-88E6-262E97AFE6AD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestionnaireClientSide", "QuestionnaireClientSide\QuestionnaireClientSide.csproj", "{5F3D4827-5A65-4295-B224-A50D9BB85062}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{41F20552-C2D2-45B8-88E6-262E97AFE6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41F20552-C2D2-45B8-88E6-262E97AFE6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41F20552-C2D2-45B8-88E6-262E97AFE6AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3D4827-5A65-4295-B224-A50D9BB85062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3D4827-5A65-4295-B224-A50D9BB85062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3D4827-5A65-4295-B224-A50D9BB85062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3D4827-5A65-4295-B224-A50D9BB85062}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
