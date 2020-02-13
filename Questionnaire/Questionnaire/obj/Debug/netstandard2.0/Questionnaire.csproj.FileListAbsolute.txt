@@ -1,0 +1,12 @@
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\staticwebassets\Questionnaire.StaticWebAssets.Manifest.cache
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\staticwebassets\Questionnaire.StaticWebAssets.xml
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\Questionnaire.RazorComponent.input.cache
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\App.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Counter.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Index.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Pages\_Imports.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+E:\Projects\schlegp\CCD-Training2-Questionnaire\Questionnaire\Questionnaire\obj\Debug\netstandard2.0\RazorDeclaration\_Imports.razor.g.cs
