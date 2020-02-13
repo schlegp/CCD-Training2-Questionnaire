@@ -1,16 +1,29 @@
 ﻿@page "/counter"
+@using Questionnaire.Models;
 
 <h1>Counter</h1>
 
+@if (Questions == null)
+{
+    <p>Warte MAl</p>
+}
+else 
+{
+    <p>Ich habe @Questions.Count() Fragen für disch</p>
+}
 <p>Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
     private int currentCount = 0;
 
-    private void IncrementCount()
+    private QuestionHandler qHandler;
+
+    private IEnumerable<Question> Questions;
+
+    protected override void OnInitialized()
     {
-        currentCount++;
+        qHandler = new QuestionHandler();
+        Questions = qHandler.Provide();
+        base.OnInitialized();
     }
 }
