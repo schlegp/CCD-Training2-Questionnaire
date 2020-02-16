@@ -28,7 +28,7 @@ namespace Questionnaire
 
         public int CalculatePercentage(IEnumerable<Question> questions)
         {
-            var correctAnswers = questions.SelectMany(x => x.Answers.Where(y => x.ChoosenAnswer == y.Text && y.IsCorrect));
+            var correctAnswers = questions.SelectMany(x => x.Answers.Where(y => x.ChosenAnswer?.Text == y.Text && y.IsCorrect));
             var numberQuestions = questions.Count();
             var score = (double)correctAnswers.Count() / (double)numberQuestions;
             var scorePercent = score * 100;
@@ -40,7 +40,7 @@ namespace Questionnaire
             var answerState = new AnswerState
             {
                 CorrectAnswer = question.Answers.FirstOrDefault(x => x.IsCorrect),
-                GivenAnswer = question.Answers.FirstOrDefault(x => x.Text == question.ChoosenAnswer),
+                GivenAnswer = question.Answers.FirstOrDefault(x => x.Text == question.ChosenAnswer?.Text),
                 Question = question
             };
             answerState.Correct = answerState.GivenAnswer == answerState.CorrectAnswer;

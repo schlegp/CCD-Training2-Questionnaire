@@ -136,6 +136,11 @@ app {
     top: 0.5rem;
 }
 
+#div-border {
+    border: solid;
+    border-radius: 3px;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;

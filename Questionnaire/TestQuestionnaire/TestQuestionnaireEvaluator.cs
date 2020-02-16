@@ -19,7 +19,7 @@ namespace TestQuestionnaire
         [TestMethod]
         public void TestIsAnswerCorrectRightQuestionText()
         {
-            var CorrectQuestion = new Question() { Text = "Test Question", ChoosenAnswer = "Right Answer", Answers = new List<Answer>() { new Answer() { Text = "Right Answer", IsCorrect = true } } };
+            var CorrectQuestion = new Question() { Text = "Test Question", ChosenAnswer = new Answer { Text = "Right Answer" }, Answers = new List<Answer>() { new Answer() { Text = "Right Answer", IsCorrect = true } } };
             var answer = Evaluator.IsAnswerCorrect(CorrectQuestion);
             Assert.AreEqual(answer.Question.Text, CorrectQuestion.Text);
         }
@@ -27,19 +27,19 @@ namespace TestQuestionnaire
         [TestMethod]
         public void TestIsAnswerCorrectTrue()
         {
-            var CorrectQuestion = new Question() { Text = "Test Question", ChoosenAnswer = "Right Answer", Answers = new List<Answer>() { new Answer() { Text = "Right Answer", IsCorrect = true } } };
+            var CorrectQuestion = new Question() { Text = "Test Question", ChosenAnswer = new Answer { Text = "Right Answer"}, Answers = new List<Answer>() { new Answer() { Text = "Right Answer", IsCorrect = true } } };
             var answer = Evaluator.IsAnswerCorrect(CorrectQuestion);
-            Assert.AreEqual(answer.GivenAnswer.Text, CorrectQuestion.ChoosenAnswer);
-            Assert.AreEqual(answer.CorrectAnswer.Text, CorrectQuestion.ChoosenAnswer);
+            Assert.AreEqual(answer.GivenAnswer.Text, CorrectQuestion.ChosenAnswer.Text);
+            Assert.AreEqual(answer.CorrectAnswer.Text, CorrectQuestion.ChosenAnswer.Text);
         }
 
         [TestMethod]
         public void TestIsAnswerCorrectFalse()
         {
-            var CorrectQuestion = new Question() { Text = "Test Question", ChoosenAnswer = "False Answer", Answers = new List<Answer>() { new Answer() { Text = "Right Answer", IsCorrect = true }, new Answer() { Text = "False Answer", IsCorrect = false } } };
+            var CorrectQuestion = new Question() { Text = "Test Question", ChosenAnswer = new Answer { Text = "False Answer" }, Answers = new List<Answer>() { new Answer() { Text = "Right Answer", IsCorrect = true }, new Answer() { Text = "False Answer", IsCorrect = false } } };
             var answer = Evaluator.IsAnswerCorrect(CorrectQuestion);
-            Assert.AreEqual(answer.GivenAnswer.Text, CorrectQuestion.ChoosenAnswer);
-            Assert.AreNotEqual(answer.CorrectAnswer.Text, CorrectQuestion.ChoosenAnswer);
+            Assert.AreEqual(answer.GivenAnswer.Text, CorrectQuestion.ChosenAnswer.Text);
+            Assert.AreNotEqual(answer.CorrectAnswer.Text, CorrectQuestion.ChosenAnswer.Text);
         }
 
         [TestMethod]
@@ -47,9 +47,9 @@ namespace TestQuestionnaire
         {
             List<Question> questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text = "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
             var expected = 33;
             var percentage = Evaluator.CalculatePercentage(questions);
@@ -57,9 +57,9 @@ namespace TestQuestionnaire
 
             questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
             expected = 66;
             percentage = Evaluator.CalculatePercentage(questions);
@@ -67,9 +67,9 @@ namespace TestQuestionnaire
 
             questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
             expected = 100;
             percentage = Evaluator.CalculatePercentage(questions);
@@ -77,10 +77,10 @@ namespace TestQuestionnaire
 
             questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
             expected = 50;
             percentage = Evaluator.CalculatePercentage(questions);
@@ -88,10 +88,10 @@ namespace TestQuestionnaire
 
             questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
             expected = 25;
             percentage = Evaluator.CalculatePercentage(questions);
@@ -99,10 +99,10 @@ namespace TestQuestionnaire
 
             questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
             expected = 75;
             percentage = Evaluator.CalculatePercentage(questions);
@@ -114,16 +114,16 @@ namespace TestQuestionnaire
         {
             List<Question> questions = new List<Question>
             {
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
-                new Question { Text = "", ChoosenAnswer = "2", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }},
+                new Question { Text = "", ChosenAnswer = new Answer { Text =  "2" }, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}
             };
 
             var expected = new Score
@@ -131,16 +131,16 @@ namespace TestQuestionnaire
                 Percentage = 40,
                 AnswerStates = new List<AnswerState>
             {
-                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
-                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChoosenAnswer = "1", Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}}
+                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "1", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "1", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}},
+                new AnswerState { GivenAnswer = new Answer { Text = "2", IsCorrect = true}, CorrectAnswer = new Answer { Text = "1", IsCorrect = true}, Question = new Question { Text = "", ChosenAnswer = new Answer { Text =  "1"}, Answers = new List<Answer> { new Answer { Text = "2", IsCorrect = true} }}}
             }
             };
 

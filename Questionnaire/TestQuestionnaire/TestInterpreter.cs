@@ -58,7 +58,7 @@ namespace TestQuestionnaire
         [TestMethod]
         public void TestAddNotKnown()
         {
-            var CorrectQuestion = new Question() { Text = "Test Question", ChoosenAnswer = "First Answer", Answers = new List<Answer>() { new Answer() { Text = "First Answer", IsCorrect = true }, new Answer() { Text = "Second Answer", IsCorrect = false } } };
+            var CorrectQuestion = new Question() { Text = "Test Question", ChosenAnswer = new Answer { Text = "First Answer" } , Answers = new List<Answer>() { new Answer() { Text = "First Answer", IsCorrect = true }, new Answer() { Text = "Second Answer", IsCorrect = false } } };
             testInterpreter.AddNotKnown(CorrectQuestion);
             Assert.AreEqual(CorrectQuestion.Answers.Count, 3);
         }
@@ -66,7 +66,7 @@ namespace TestQuestionnaire
         [TestMethod]
         public void TestAddNotKnownAsLast()
         {
-            var CorrectQuestion = new Question() { Text = "Test Question", ChoosenAnswer = "First Answer", Answers = new List<Answer>() { new Answer() { Text = "First Answer", IsCorrect = true }, new Answer() { Text = "Second Answer", IsCorrect = false } } };
+            var CorrectQuestion = new Question() { Text = "Test Question", ChosenAnswer = new Answer { Text = "First Answer" }, Answers = new List<Answer>() { new Answer() { Text = "First Answer", IsCorrect = true }, new Answer() { Text = "Second Answer", IsCorrect = false } } };
             testInterpreter.AddNotKnown(CorrectQuestion);
             Assert.AreEqual(CorrectQuestion.Answers.Last().Text, "Don't know");
             Assert.AreEqual(CorrectQuestion.Answers.Last().IsCorrect, false);

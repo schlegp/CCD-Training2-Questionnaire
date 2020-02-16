@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\phsc1\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.4.0</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)blazorfabric.spinner\2.2.0\contentFiles\any\netstandard2.1\obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Spinner.StaticWebAssets.xml" Condition="Exists('$(NuGetPackageRoot)blazorfabric.spinner\2.2.0\contentFiles\any\netstandard2.1\obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Spinner.StaticWebAssets.xml')">
+      <NuGetPackageId>BlazorFabric.Spinner</NuGetPackageId>
+      <NuGetPackageVersion>2.2.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Spinner.StaticWebAssets.xml</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)blazorfabric.button\2.2.0\contentFiles\any\netstandard2.1\obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Button.StaticWebAssets.xml" Condition="Exists('$(NuGetPackageRoot)blazorfabric.button\2.2.0\contentFiles\any\netstandard2.1\obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Button.StaticWebAssets.xml')">
+      <NuGetPackageId>BlazorFabric.Button</NuGetPackageId>
+      <NuGetPackageVersion>2.2.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Button.StaticWebAssets.xml</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)blazorfabric.dropdown\2.2.0\contentFiles\any\netstandard2.1\obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Dropdown.StaticWebAssets.xml" Condition="Exists('$(NuGetPackageRoot)blazorfabric.dropdown\2.2.0\contentFiles\any\netstandard2.1\obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Dropdown.StaticWebAssets.xml')">
+      <NuGetPackageId>BlazorFabric.Dropdown</NuGetPackageId>
+      <NuGetPackageVersion>2.2.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>obj\Release\netstandard2.1\staticwebassets\BlazorFabric.Dropdown.StaticWebAssets.xml</Link>
+    </Content>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.mono\3.2.0-preview1.20067.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Mono.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.mono\3.2.0-preview1.20067.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Mono.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.2.0-preview1.20073.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.2.0-preview1.20073.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.basecomponent\2.2.0\buildTransitive\BlazorFabric.BaseComponent.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.basecomponent\2.2.0\buildTransitive\BlazorFabric.BaseComponent.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.spinner\2.2.0\buildTransitive\BlazorFabric.Spinner.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.spinner\2.2.0\buildTransitive\BlazorFabric.Spinner.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.overlay\2.2.0\buildTransitive\BlazorFabric.Overlay.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.overlay\2.2.0\buildTransitive\BlazorFabric.Overlay.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.layer\2.2.0\buildTransitive\BlazorFabric.Layer.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.layer\2.2.0\buildTransitive\BlazorFabric.Layer.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.callout\2.2.0\buildTransitive\BlazorFabric.Callout.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.callout\2.2.0\buildTransitive\BlazorFabric.Callout.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.keytip\2.2.0\buildTransitive\BlazorFabric.Keytip.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.keytip\2.2.0\buildTransitive\BlazorFabric.Keytip.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.icon\2.2.0\buildTransitive\BlazorFabric.Icon.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.icon\2.2.0\buildTransitive\BlazorFabric.Icon.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.focuszone\2.2.0\buildTransitive\BlazorFabric.FocusZone.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.focuszone\2.2.0\buildTransitive\BlazorFabric.FocusZone.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.focustrapzone\2.2.0\buildTransitive\BlazorFabric.FocusTrapZone.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.focustrapzone\2.2.0\buildTransitive\BlazorFabric.FocusTrapZone.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.contextualmenu\2.2.0\buildTransitive\BlazorFabric.ContextualMenu.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.contextualmenu\2.2.0\buildTransitive\BlazorFabric.ContextualMenu.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.button\2.2.0\buildTransitive\BlazorFabric.Button.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.button\2.2.0\buildTransitive\BlazorFabric.Button.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.panel\2.2.0\buildTransitive\BlazorFabric.Panel.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.panel\2.2.0\buildTransitive\BlazorFabric.Panel.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.label\2.2.0\buildTransitive\BlazorFabric.Label.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.label\2.2.0\buildTransitive\BlazorFabric.Label.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.checkbox\2.2.0\buildTransitive\BlazorFabric.Checkbox.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.checkbox\2.2.0\buildTransitive\BlazorFabric.Checkbox.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorfabric.dropdown\2.2.0\buildTransitive\BlazorFabric.Dropdown.props" Condition="Exists('$(NuGetPackageRoot)blazorfabric.dropdown\2.2.0\buildTransitive\BlazorFabric.Dropdown.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_AspNetCore_Blazor_Mono Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Mono)' == '' ">C:\Users\phsc1\.nuget\packages\microsoft.aspnetcore.blazor.mono\3.2.0-preview1.20067.1</PkgMicrosoft_AspNetCore_Blazor_Mono>
+    <PkgMicrosoft_AspNetCore_Blazor_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_DevServer)' == '' ">C:\Users\phsc1\.nuget\packages\microsoft.aspnetcore.blazor.devserver\3.2.0-preview1.20073.1</PkgMicrosoft_AspNetCore_Blazor_DevServer>
+    <PkgMicrosoft_AspNetCore_Blazor_Build Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Build)' == '' ">C:\Users\phsc1\.nuget\packages\microsoft.aspnetcore.blazor.build\3.2.0-preview1.20073.1</PkgMicrosoft_AspNetCore_Blazor_Build>
+  </PropertyGroup>
+</Project>

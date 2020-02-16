@@ -1,0 +1,17 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/BlazorFabric.BaseComponent" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.basecomponent\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Button" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.button\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Callout" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.callout\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Checkbox" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.checkbox\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.ContextualMenu" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.contextualmenu\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Dropdown" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.dropdown\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.FocusTrapZone" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.focustrapzone\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.FocusZone" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.focuszone\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Icon" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.icon\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Keytip" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.keytip\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Label" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.label\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Layer" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.layer\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Overlay" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.overlay\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Panel" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.panel\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorFabric.Spinner" Path="C:\Users\phsc1\.nuget\packages\blazorfabric.spinner\2.2.0\build\..\staticwebassets\" />
+</StaticWebAssets>

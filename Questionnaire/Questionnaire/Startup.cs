@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Questionnaire.Services;
 
 namespace Questionnaire
 {
@@ -26,6 +27,8 @@ namespace Questionnaire
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddSingleton(typeof(RefreshService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

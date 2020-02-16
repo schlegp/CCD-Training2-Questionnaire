@@ -8,6 +8,7 @@
     <PackageReference Include="BlazorFabric.Button" Version="2.2.0" />
     <PackageReference Include="BlazorFabric.Dropdown" Version="2.2.0" />
     <PackageReference Include="BlazorFabric.Spinner" Version="2.2.0" />
+    <PackageReference Include="MatBlazor" Version="2.1.2" />
   </ItemGroup>
 
 </Project>

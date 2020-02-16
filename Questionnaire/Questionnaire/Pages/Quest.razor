@@ -1,7 +1,10 @@
 ﻿@page "/questionnaire"
 @using Questionnaire.Models
+@using Questionnaire.Component
+@using Questionnaire.Services
+@inject RefreshService refresh
 
-<h1>Counter</h1>
+    <h1>Questionnaire DeLuxe</h1>
 
 @if (Questions == null)
 {
@@ -10,30 +13,28 @@
 else if (currentScore != null)
 {
 
-    <div>@currentScore.CountCorrect out of @currentScore.AnswerStates.Count() questions answered correctly (@currentScore.Percentage%)</div>
+    <div><b>@currentScore.CountCorrect out of @currentScore.AnswerStates.Count() questions answered correctly (@currentScore.Percentage%)</b></div>
     @foreach (var answerState in currentScore.AnswerStates)
     {
         <div style="overflow:auto">
             <h4>@answerState.Question.Text</h4>
             @if (answerState.GivenAnswer == answerState.CorrectAnswer)
             {
-                <div><div>Your answer '@answerState.GivenAnswer.Text' is correct</div></div>
+                <div><h5>Your answer '@answerState.GivenAnswer.Text' is correct</h5></div>
             }
             else
             {
-                <div><div>Your answer '@answerState.GivenAnswer.Text' is wrong</div><div>Correct answer: '@answerState.CorrectAnswer.Text'</div></div>
+                <div><h5>Your answer '@answerState.GivenAnswer?.Text' is wrong</h5><div>Correct answer: '@answerState.CorrectAnswer.Text'</div></div>
             }
         </div>
     }
 }
 else
 {
-    @foreach (var question in Questions)
-    {
-        <QuestionComp Question="question"></QuestionComp>
-    }
-    <div></div>
-    <BlazorFabric.PrimaryButton Text="Submit" OnClick="@Submit" />
+    <QuestionWindowComponent Questions="Questions"></QuestionWindowComponent>
+    <div>
+        <BlazorFabric.PrimaryButton Style="margin:2em 2em 2em 0em" Text="Submit" OnClick="@Submit"/>
+    </div>
 }
 
 @code {
@@ -45,11 +46,15 @@ else
 
     private IEnumerable<Question> Questions;
 
+    private bool canNotSubmit = true;
+
     protected override void OnInitialized()
     {
         qHandler = new QuestionHandler();
         evaluator = new QuestionnaireEvaluator();
         Questions = qHandler.Provide();
+
+
         base.OnInitialized();
     }
 
@@ -57,4 +62,5 @@ else
     {
         currentScore = evaluator.Evaluate(Questions);
     }
+
 }

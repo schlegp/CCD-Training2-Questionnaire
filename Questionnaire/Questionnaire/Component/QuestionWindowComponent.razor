@@ -1,0 +1,55 @@
+﻿<div>
+    <div>
+        <QuestionComp Question=@currentQuestion></QuestionComp>
+    </div>
+    <div>
+        <BlazorFabric.PrimaryButton Text="Previous" OnClick="@Previous" Disabled="@PreviousDisabled" /><BlazorFabric.PrimaryButton Style="margin-left: 5em" Text="Next" OnClick="@Next" Disabled="@NextDisabled"/>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<Question> Questions { get; set; }
+
+    private Question currentQuestion;
+    private int amountOfSteps = 1;
+    private IEnumerator<Question> questionEnumerator;
+
+    public bool PreviousDisabled = true;
+    public bool NextDisabled = false;
+
+    protected override void OnInitialized()
+    {
+        questionEnumerator = Questions.GetEnumerator();
+        questionEnumerator.MoveNext();
+        currentQuestion = questionEnumerator.Current;
+        base.OnInitialized();
+    }
+
+    public void Next()
+    {
+        if (questionEnumerator.MoveNext())
+        {
+            amountOfSteps++;
+            currentQuestion = questionEnumerator.Current;
+            NextDisabled = amountOfSteps == Questions.Count();
+            PreviousDisabled = amountOfSteps == 1;
+        }
+    }
+
+    public void Previous()
+    {
+        questionEnumerator.Reset();
+        if(amountOfSteps > 1)
+            amountOfSteps--;
+        for(int i = 0; i < amountOfSteps; i++)
+        {
+            questionEnumerator.MoveNext();
+        }
+        
+        currentQuestion = questionEnumerator.Current;
+        PreviousDisabled = amountOfSteps == 1;
+        NextDisabled = amountOfSteps == Questions.Count();
+    }
+
+    
+}
