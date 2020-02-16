@@ -8,6 +8,56 @@ a, .btn-link {
     color: #0366d6;
 }
 
+@supports(display: grid) {
+    @media screen and (min-width: 800px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.5fr 1fr 2fr 0.5fr 1fr;
+            grid-template-areas: 
+                "header header" 
+                "question question" 
+                "main main" 
+                "prevButton nextButton" 
+                "footer footer"
+        }
+
+        .questionSite {
+            width: 30%;
+        }
+
+        .questHead {
+            text-align: center;
+            grid-area: header;
+        }
+
+        .questQuest {
+            font-size: 1.75rem;
+            border: thick;
+            grid-area: question;
+        }
+
+        .questMain {
+            grid-area: main;
+        }
+
+        .questPrevButton {
+            text-align: center;
+            grid-area: prevButton;
+        }
+
+        .questNextButton {
+            text-align: center;
+            grid-area: nextButton;
+        }
+
+        .questFooter {
+            text-align: center;
+            grid-area: footer;
+        }
+    }
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;

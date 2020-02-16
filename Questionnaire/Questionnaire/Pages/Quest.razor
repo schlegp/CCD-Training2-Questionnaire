@@ -4,7 +4,7 @@
 @using Questionnaire.Services
 @inject RefreshService refresh
 
-    <h1>Questionnaire DeLuxe</h1>
+
 
 @if (Questions == null)
 {
@@ -31,9 +31,14 @@ else if (currentScore != null)
 }
 else
 {
-    <QuestionWindowComponent Questions="Questions"></QuestionWindowComponent>
-    <div>
-        <BlazorFabric.PrimaryButton Style="margin:2em 2em 2em 0em" Text="Submit" OnClick="@Submit"/>
+    <div name="mainThing" class="site questionSite">
+        <div class="questHead">
+            <h1>Questionnaire</h1>
+        </div>
+        <QuestionWindowComponent Questions="Questions"></QuestionWindowComponent>
+        <div class="questFooter">
+            <BlazorFabric.PrimaryButton Style="margin:2em 2em 2em 0em" Text="Submit" OnClick="@Submit" />
+        </div>
     </div>
 }
 

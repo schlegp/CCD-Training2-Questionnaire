@@ -1,11 +1,12 @@
-﻿<div>
-    <div>
+﻿
         <QuestionComp Question=@currentQuestion></QuestionComp>
-    </div>
-    <div>
-        <BlazorFabric.PrimaryButton Text="Previous" OnClick="@Previous" Disabled="@PreviousDisabled" /><BlazorFabric.PrimaryButton Style="margin-left: 5em" Text="Next" OnClick="@Next" Disabled="@NextDisabled"/>
-    </div>
-</div>
+        <div class="questPrevButton">
+            <BlazorFabric.PrimaryButton Text="Previous" OnClick="@Previous" Disabled="@PreviousDisabled" />
+        </div>
+        <div class="questNextButton">
+            <BlazorFabric.PrimaryButton Text="Next" OnClick="@Next" Disabled="@NextDisabled" />
+        </div>
+
 @code {
     [Parameter]
     public IEnumerable<Question> Questions { get; set; }

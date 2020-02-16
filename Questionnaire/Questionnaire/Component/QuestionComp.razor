@@ -8,7 +8,10 @@
 }
 else
 {
-    <h3>@(Question.Text)?</h3>
+<div class="questQuest">
+    <p>@(Question.Text)?</p>
+</div>
+<div class="questMain">
     <MatRadioGroup @bind-Value="@Question.ChosenAnswer" @bind-Value:event="@Test" Items="@Question.Answers">
         <ItemTemplate>
             <div>
@@ -16,4 +19,5 @@ else
             </div>
         </ItemTemplate>
     </MatRadioGroup>
+</div>
 }
